@@ -10,6 +10,12 @@ ThreeVector::ThreeVector(double arg1, double arg2, double arg3){
 	z = arg3;
 }
 
+ThreeVector::ThreeVector(FourVector v){
+	x = v.x;
+	y = v.y;
+	z = v.z;
+}
+
 double ThreeVector::operator *(const ThreeVector& rh){
 	double sumx = (x)*(rh.x); 
 	double sumy = (y)*(rh.y);

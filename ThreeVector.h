@@ -4,6 +4,7 @@
 //02/12/2016
 
 #include <iostream>
+#include "FourVector.h"
 
 #ifndef THREEVECTOR_H
 #define THREEVECTOR_H
@@ -15,9 +16,12 @@ protected:
 	double z;	//the z component 
 
 public:
-	FourVector(double, double, double);	//This creates a three-vector given components
+	ThreeVector(double, double, double);	//This creates a three-vector given components
 	//components are given as 
 	//x y z 
+
+	ThreeVector(FourVector);	
+	//This generates a three vector from a 4-vector by simply ommiting the time component 
 
 	double operator *(const ThreeVector&);	//The normal dot-product
 	
